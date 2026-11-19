@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lucus Core Gateway Engine</title>
+  <meta name="description" content="Zero-egress edge minimization framework for telemetry compression.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="landing-shell">
+    <section class="backdrop backdrop-one" aria-hidden="true"></section>
+    <section class="backdrop backdrop-two" aria-hidden="true"></section>
+
+    <header class="top-nav">
+      <div>
+        <p class="eyebrow">StrataLayer Systems</p>
+        <strong class="nav-brand">Core Gateway Engine</strong>
+      </div>
+      <a class="secondary-button" href="dashboard.html">Open dashboard</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="section-label">Zero-egress telemetry minimization</p>
+        <h1>Cut telemetry bloat before it leaves the edge</h1>
+        <p class="hero-lead">
+          Lucus compresses noisy JSON telemetry, measures the savings and shows the result in a clean operational dashboard.
+        </p>
+
+        <div class="cta-row">
+          <a class="primary-button" href="dashboard.html">Enter the control plane</a>
+          <a class="ghost-link" href="#how-it-works">How it works</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <span class="metric-label">What this does</span>
+        <p class="hero-summary">
+          Simulates an edge gateway that accepts telemetry, normalizes the payload, gzips it, and returns compression metrics for DevOps and FinOps teams.
+        </p>
+        <dl class="feature-stats">
+          <div>
+            <dt>Input</dt>
+            <dd>Bloated JSON payloads</dd>
+          </div>
+          <div>
+            <dt>Users</dt>
+            <dd>Platform and finance teams</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="feature-grid" id="how-it-works">
+      <article class="mini-card">
+        <span class="metric-label">Step 1</span>
+        <h2>Open the dashboard</h2>
+        <p>Jump into the ingestion simulator to edit JSON and trigger the optimization loop.</p>
+      </article>
+      <article class="mini-card">
+        <span class="metric-label">Step 2</span>
+        <h2>Run the optimizer</h2>
+        <p>Lucus strips empty fields and padding from the payload, then gzips the result.</p>
+      </article>
+      <article class="mini-card">
+        <span class="metric-label">Step 3</span>
+        <h2>Read the savings</h2>
+        <p>Review bytes saved, compression ratio, and latency in the control plane cards.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
