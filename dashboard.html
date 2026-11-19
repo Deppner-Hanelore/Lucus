@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lucus Dashboard</title>
+  <meta name="description" content="Ingestion simulator and compression diagnostics for Lucus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="backdrop backdrop-one" aria-hidden="true"></section>
+    <section class="backdrop backdrop-two" aria-hidden="true"></section>
+
+    <header class="header">
+      <div>
+        <p class="eyebrow"><a href="index.html" style="color: inherit;">StrataLayer Systems</a></p>
+        <h1>Zero-Egress Edge Minimization Framework</h1>
+      </div>
+      <p class="header-note">
+        Serverless compression, operational clarity, and cost reduction in one control surface.
+      </p>
+    </header>
+
+    <section class="dashboard">
+      <section class="panel terminal-panel">
+        <div class="panel-heading">
+          <h2>Ingestion Simulator</h2>
+          <span>Mutable telemetry stream</span>
+        </div>
+        <label class="terminal-label" for="telemetry-input">Mock payload injection</label>
+        <textarea id="telemetry-input" class="terminal-input" spellcheck="false"></textarea>
+        <div class="actions">
+          <button id="optimize-button" class="primary-button" type="button">Trigger Ingestion Optimization Loop</button>
+          <div id="status-chip" class="status-chip" data-state="idle">Ready</div>
+        </div>
+        <p class="supporting-copy">
+          The simulator normalizes the current JSON payload, gzips it in your browser, and
+          refreshes the diagnostics panel with live metrics.
+        </p>
+        <p id="error-banner" class="error-banner" hidden></p>
+      </section>
+
+      <section class="panel analytics-panel">
+        <div class="panel-heading">
+          <h2>Diagnostic Control Plane</h2>
+          <span>Real-time compression telemetry</span>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span class="metric-label">Status</span>
+            <strong class="metric-value status-value" id="m-status">idle</strong>
+            <p class="metric-subtext" id="m-client">client-uuid-token</p>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Environment</span>
+            <strong class="metric-value" id="m-env">production</strong>
+            <p class="metric-subtext">Edge runtime profile</p>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Original bytes</span>
+            <strong class="metric-value" id="m-original">0</strong>
+            <p class="metric-subtext">Raw JSON ingress</p>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Optimized bytes</span>
+            <strong class="metric-value" id="m-optimized">0</strong>
+            <p class="metric-subtext">Gzip binary output</p>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Reduction</span>
+            <strong class="metric-value" id="m-reduction">0.00%</strong>
+            <p class="metric-subtext">Space removed</p>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Compression ratio</span>
+            <strong class="metric-value" id="m-ratio">0.0x</strong>
+            <p class="metric-subtext">Density multiplier</p>
+          </article>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <span>Reduction gauge</span>
+            <strong id="gauge-label">0.00%</strong>
+          </div>
+          <div class="bar-track" aria-hidden="true">
+            <div class="bar-fill" id="gauge-fill" style="width: 0%"></div>
+          </div>
+          <div class="chart-footer">
+            <span>Edge latency</span>
+            <strong id="m-latency">0.00 ms</strong>
+          </div>
+        </div>
+
+        <div class="insight-strip">
+          <div>
+            <span class="metric-label">Latency profile</span>
+            <strong id="m-latency-2">0.00 ms</strong>
+          </div>
+          <div>
+            <span class="metric-label">Target efficiency</span>
+            <strong id="m-ratio-2">0.0x</strong>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
